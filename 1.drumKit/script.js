@@ -1,4 +1,5 @@
-window.addEventListener('keydown', function(e) {
+window.addEventListener('keydown', (e) => {
+	// Select elements
 	var sound = document.querySelector(`source[data-key="${e.keyCode}"]`);
 	var key = document.querySelector(`div[data-key="${e.keyCode}"]`);
 
@@ -9,7 +10,7 @@ window.addEventListener('keydown', function(e) {
 	sound = new Audio(sound.src);
 	sound.play();
 	
-	// Add class
+	// Add class when playing
 	key.classList.add("playing");
 });
 
