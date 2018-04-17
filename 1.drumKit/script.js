@@ -16,9 +16,10 @@ window.addEventListener('keydown', (e) => {
 
 // Select all keys
 var keys = document.querySelectorAll(".keys");
+
 // Event transition end
-keys.forEach(element => {
-	element.addEventListener('transitionend', (e) => {
+keys.forEach((ele) => {
+	ele.addEventListener('transitionend', (e) => {
 		e.target.classList.remove("playing");
 	});
 });
