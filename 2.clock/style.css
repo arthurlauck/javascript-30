@@ -19,31 +19,50 @@ html {
     height: 40rem;
     width: 40rem;
     border-radius: 50%;
-    border: solid 1.5rem #000;
+    border: solid 1.5rem white;
     position: relative;
+    box-shadow:
+        0 0 0 4px rgba(0,0,0,0.1),
+        inset 0 0 0 3px #EFEFEF,
+        inset 0 0 10px black,
+        0 0 10px rgba(0,0,0,0.2);
+}
+
+.center-watch {
+    width: 3rem;
+    height: 3rem;
+    background: #000;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 999;
+    transform: translate(-50%, -50%);
 }
 
 .sec-hand, .min-hand, .hour-hand {
+    vertical-align: middle;
     position: absolute;
     bottom: 50%;
     left: 50%;
     background:#000;
     transform-origin: 0 100%;
-    transform: rotate(0deg);
+    transform: translateX(-50%) rotate(0deg);
+    transition: all .1s ease;
 }
 
 .min-hand {
-    height: 16rem;
     width: .8rem;
+    height: 40%;
 }
 
 .sec-hand {
     background: red;
     width: .6rem;
-    height: 18rem;
+    height: 45%;
 }
 
 .hour-hand {
     width: 1.2rem;
-    height: 10rem;
+    height: 25%;
 }
