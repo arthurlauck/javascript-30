@@ -50,7 +50,7 @@
         const totalYears = inventors.reduce((total, people) => {
             return total + (people.passed - people.year);
         }, 0);
-        console.log(totalYears);
+        // console.log(totalYears);
 
         // 5. Sort the inventors by years lived
         const older = inventors.sort((a, b) => {
@@ -58,15 +58,31 @@
             let personB = (b.passed - b.year);
             return (personA > personB) ? 1 : -1;
         });
-        console.table(older);
+        // console.table(older);
 
         // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
         // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
+        // const categories = document.querySelector(".mw-category");
+        // const links = Array.from(categories.querySelectorAll("a"));
+        // const de = links
+        //     .map( link => link.textContent)
+        //     .filter(streetName => streetName.includes('de'));
+
         // 7. sort Exercise
+        const alpha = people.sort( (first, second) => {
+            const [aLast, aFirst] = first.split(', ');
+            const [bLast, bFirst] = second.split(', ');
+            return aLast > bLast ? 1 : -1;
+        });
+        // console.log(alpha);
         // Sort the people alphabetically by last name
         // 8. Reduce Exercise
         // Sum up the instances of each of these
         const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck'];
+
+        const transportation = data.reduce((obj, item) => {
+            
+        });
     </script>
 </body>
 
